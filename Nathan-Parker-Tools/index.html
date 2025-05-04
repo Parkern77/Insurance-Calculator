@@ -1,10 +1,146 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Test Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cooke & Grayson County Home Insurance Estimator - Bezner Insurance</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <h1>Test Page</h1>
-  <p>If you can see this, GitHub Pages is working!</p>
+    <div class="top-bar">
+        Proudly serving North Texas families since 1952 • 24/7 Customer Support
+    </div>
+
+    <div class="header">
+        <div class="container">
+            <div class="logo-section">
+                <h1 style="color: #008080; font-size: 2.5rem; margin: 0;">BEZNER</h1>
+                <h2 style="color: #404040; font-size: 1.8rem; margin: 0.5rem 0;">INSURANCE</h2>
+                <p style="color: #008080; font-size: 1.2rem;">AUTO | HOME | LIFE</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <h1 style="text-align: center; color: #008080; margin: 2rem 0;">Cooke & Grayson County Home Insurance Estimator</h1>
+        <p style="text-align: center; margin-bottom: 2rem;">Family owned and run agency specializing in Texas properties since 1952</p>
+
+        <div class="calculator-card">
+            <form id="estimator-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>County</label>
+                        <select id="county" required>
+                            <option value="">Select County</option>
+                            <option value="cooke">Cooke County</option>
+                            <option value="grayson">Grayson County</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>City/Town</label>
+                        <select id="city" required>
+                            <option value="">Select County First</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Home Value ($)</label>
+                        <input type="number" id="home-value" placeholder="250000" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Year Built</label>
+                        <input type="number" id="year-built" placeholder="1995" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label>Square Footage</label>
+                        <input type="number" id="square-feet" placeholder="1800" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Roof Age</label>
+                        <select id="roof-age" required>
+                            <option value="0-5">0-5 years (New)</option>
+                            <option value="6-10">6-10 years</option>
+                            <option value="11-15">11-15 years</option>
+                            <option value="16+">16+ years</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Safety Features</label>
+                    <select id="safety-features">
+                        <option value="none">None</option>
+                        <option value="some">Fire alarm &amp; deadbolts</option>
+                        <option value="many">Fire alarm, deadbolts &amp; security system</option>
+                        <option value="all">All safety features including sprinkler system</option>
+                    </select>
+                </div>
+
+                <button type="submit">Get My Free Estimate</button>
+            </form>
+
+            <div id="results" class="results">
+                <h2>Your Estimated Insurance Premium</h2>
+                <div class="estimate-price" id="estimate-price">$1,450/year</div>
+                <p>Based on North Texas averages for your property type</p>
+                
+                <div class="highlight-box">
+                    <strong>Our Advantage:</strong> As an independent agency, we shop multiple carriers to get you the best coverage at the most competitive rate.
+                </div>
+            </div>
+
+            <div id="lead-form" class="lead-form" style="display: none;">
+                <h3>Get Your Personalized Quote</h3>
+                <p>Speak with one of our licensed agents for a custom quote that meets your specific needs</p>
+                
+                <form id="quote-form">
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Email Address</label>
+                        <input type="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" id="phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label>Best Time to Contact</label>
+                        <select id="contact-time">
+                            <option value="morning">Morning (9am-12pm)</option>
+                            <option value="afternoon">Afternoon (12pm-5pm)</option>
+                            <option value="evening">Evening (5pm-8pm)</option>
+                            <option value="anytime">Anytime</option>
+                        </select>
+                    </div>
+                    <button type="submit">Request My Personal Quote</button>
+                </form>
+            </div>
+
+            <div id="success-message" class="success-message">
+                <h3>Thank you for choosing Bezner Insurance!</h3>
+                <p>One of our licensed agents will contact you within 24 hours with your personalized quote.</p>
+                <p><strong>In the meantime, feel free to call us at (XXX) XXX-XXXX</strong></p>
+            </div>
+
+            <div class="disclaimer">
+                <p>This is an estimate only. Actual premiums may vary based on specific property details, credit score, and carrier eligibility. 
+                Licensed in Texas since 1952. Our customers are our family.</p>
+            </div>
+        </div>
+
+        <div class="contact-bar">
+            Phone: (XXX) XXX-XXXX | Email: info@beznerinsurance.com | Address: 123 E. Main St. Lindsay, TX
+        </div>
+    </div>
+
+    <script src="script.js"></script>
 </body>
 </html>
